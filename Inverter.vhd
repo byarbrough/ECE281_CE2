@@ -8,7 +8,7 @@
 -- Project Name: 	Computer Exercise 2
 -- Target Devices: Nexys 2
 -- Tool versions: 
--- Description: 
+-- Description: Behavioral
 --
 -- Dependencies: 
 --
