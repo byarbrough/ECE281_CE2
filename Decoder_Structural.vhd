@@ -40,9 +40,36 @@ entity Decoder_Structural is
 end Decoder_Structural;
 
 architecture Structural of Decoder_Structural is
+	--added code from instructions
+	--component declaration for and3
+	COMPONENT and3
+	PORT(
+		I0 : IN std_logic;
+		I1 : IN std_logic;
+		I2 : IN std_logic;
+		O : OUT std_logic
+		);
+	END COMPONENT;
+	
+	--my declaration of Inverter
+	COMPONENT Inverter
+	PORT (
+		I : IN std_logic;
+		O : OUT std_logic
+		);
+	END COMPONENT;
+	
+	--declare internal signals
+	signal I0_Not, I1_Not : std_logic;
 
 begin
-
+	--from instructions
+	Y0_and3: and3 PORT MAP(
+		I0 => I0_Not,
+		I1 => I1_Not,
+		I2 => EN,
+		O => Y0
+		);
 
 end Structural;
 
