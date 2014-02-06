@@ -1,4 +1,4 @@
 ECE281_CE2
 ==========
+##Decoder##
 
-Memory Controller
