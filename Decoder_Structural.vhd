@@ -64,12 +64,46 @@ architecture Structural of Decoder_Structural is
 
 begin
 	--from instructions
-	Y0_and3: and3 PORT MAP(
+	Y0_and3 : and3 PORT MAP(
 		I0 => I0_Not,
 		I1 => I1_Not,
 		I2 => EN,
 		O => Y0
 		);
+		
+		--mine, setup other ANDers
+		Y1_and3 : and3 PORT MAP(
+			I0 => I0,
+			I1 => I1_Not,
+			I2 => EN,
+			O => Y1
+		);
 
+		Y2_and3 : and3 PORT MAP(
+			I0 => I0_Not,
+			I1 => I1,
+			I2 => EN,
+			O => Y2
+		);
+		
+		Y3_and3 : and3 PORT MAP(
+			I0 => I0,
+			I1 => I1,
+			I2 => EN,
+			O => Y3
+		);
+		
+		--setup two inverters
+		
+		I0_inverter : Inverter PORT MAP(
+			I => I0,
+			O => I0_Not
+		);
+		
+		I1_inverter : Inverter PORT MAP (
+			I => I1,
+			O => I1_Not
+			);
+		
 end Structural;
 
