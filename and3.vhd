@@ -4,7 +4,7 @@
 -- 
 -- Create Date:    22:30:42 02/03/2014 
 -- Design Name: 	Memory Controller
--- Module Name:    Inverter - Behavioral 
+-- Module Name:    and3 - Behavioral 
 -- Project Name: 	Computer Exercise 2
 -- Target Devices: Nexys 2
 -- Tool versions: 
