@@ -35,8 +35,10 @@ architecture Behavioral of Decoder_Behavioral is
 	signal I0_Not, I1_Not : STD_LOGIC;
 
 begin
+	--internal signals
 	I0_Not <= not I0;
 	I1_Not <= not I1;
+	--outputs
 	Y0 <= I0_Not and I1_Not and EN;
 	Y1 <= I0 and I1_Not and EN;
 	Y2 <= I0_Not and I1 and EN;
