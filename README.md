@@ -13,3 +13,5 @@ ECE281_CE2
 ####Research
 ***What exactly are we doing here?***
 Do some research and figure out what-the-heck we just created. How does a decoder work and how can that functionality be useful in the context of computer memory? 
+
+![alt text] (https://github.com/byarbrough/ECE281_CE2/blob/master/Schematic.png?raw=true "Schematic")
