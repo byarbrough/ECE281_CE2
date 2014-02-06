@@ -4,18 +4,17 @@
 -- 
 -- Create Date:    22:30:42 02/03/2014 
 -- Design Name: 	Memory Controller
--- Module Name:    Structural Testbench
+-- Module Name:    Behavioral Testbench
 -- Project Name: 	Computer Exercise 2
 -- Target Devices: Nexys 2
 -- Tool versions: 
--- Description: Structural
+-- Description: Behavioral
 --
 -- Dependencies: 
 --
 -- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments: 
---
 --
 -- Notes: 
 -- This testbench has been automatically generated using types std_logic and
@@ -27,18 +26,14 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
+ENTITY Decoder_Behavioral_testbench IS
+END Decoder_Behavioral_testbench;
  
-ENTITY Decoder_Structural_testbench IS
-END Decoder_Structural_testbench;
- 
-ARCHITECTURE behavior OF Decoder_Structural_testbench IS 
+ARCHITECTURE behavior OF Decoder_Behavioral_testbench IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT Decoder_Structural
+    COMPONENT Decoder_Behavioral
     PORT(
          I0 : IN  std_logic;
          I1 : IN  std_logic;
@@ -61,16 +56,10 @@ ARCHITECTURE behavior OF Decoder_Structural_testbench IS
    signal Y1 : std_logic;
    signal Y2 : std_logic;
    signal Y3 : std_logic;
-	
---   -- No clocks detected in port list. Replace <clock> below with 
---   -- appropriate port name 
--- 
---   constant <clock>_period : time := 10 ns;
  
 BEGIN
- 
 	-- Instantiate the Unit Under Test (UUT)
-   uut: Decoder_Structural PORT MAP (
+   uut: Decoder_Behavioral PORT MAP (
           I0 => I0,
           I1 => I1,
           EN => EN,
@@ -79,11 +68,11 @@ BEGIN
           Y2 => Y2,
           Y3 => Y3
         );
-
-   -- Stimulus process
+		
+	-- Stimulus process
    stim_proc: process
-   begin		
-      -- hold reset state for 100 ns.
+   begin   
+		-- hold reset state for 100 ns.
       wait for 100 ns;
 		
 		EN <= '0';
@@ -129,6 +118,7 @@ BEGIN
 
 		--end testbench
 		wait;
+		
    end process;
 
 END;
